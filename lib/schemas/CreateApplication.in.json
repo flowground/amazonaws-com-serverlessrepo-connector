@@ -1,0 +1,114 @@
+{
+    "type": "object",
+    "properties": {
+        "Action": {
+            "required": true,
+            "type": "string"
+        },
+        "Version": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "Author": {
+                    "description": "<p>The name of the author publishing the app.</p><p>Minimum length=1. Maximum length=127.</p><p>Pattern \"^[a-z0-9](([a-z0-9]|-(?!-))*[a-z0-9])?$\";</p>",
+                    "type": "string"
+                },
+                "Description": {
+                    "description": "<p>The description of the application.</p><p>Minimum length=1. Maximum length=256</p>",
+                    "type": "string"
+                },
+                "HomePageUrl": {
+                    "description": "A URL with more information about the application, for example the location of your GitHub repository for the application.",
+                    "type": "string"
+                },
+                "Labels": {
+                    "description": "<p>Labels to improve discovery of apps in search results.</p><p>Minimum length=1. Maximum length=127. Maximum number of labels: 10</p><p>Pattern: \"^[a-zA-Z0-9+\\\\-_:\\\\/@]+$\";</p>",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "LicenseBody": {
+                    "description": "<p>A local text file that contains the license of the app that matches the spdxLicenseID value of your application.\n The file has the format file://&lt;path>/&lt;filename>.</p><p>Maximum size 5 MB</p><p>You can specify only one of licenseBody and licenseUrl; otherwise, an error results.</p>",
+                    "type": "string"
+                },
+                "LicenseUrl": {
+                    "description": "<p>A link to the S3 object that contains the license of the app that matches the spdxLicenseID value of your application.</p><p>Maximum size 5 MB</p><p>You can specify only one of licenseBody and licenseUrl; otherwise, an error results.</p>",
+                    "type": "string"
+                },
+                "Name": {
+                    "description": "<p>The name of the application that you want to publish.</p><p>Minimum length=1. Maximum length=140</p><p>Pattern: \"[a-zA-Z0-9\\\\-]+\";</p>",
+                    "type": "string"
+                },
+                "ReadmeBody": {
+                    "description": "<p>A local text readme file in Markdown language that contains a more detailed description of the application and how it works.\n The file has the format file://&lt;path>/&lt;filename>.</p><p>Maximum size 5 MB</p><p>You can specify only one of readmeBody and readmeUrl; otherwise, an error results.</p>",
+                    "type": "string"
+                },
+                "ReadmeUrl": {
+                    "description": "<p>A link to the S3 object in Markdown language that contains a more detailed description of the application and how it works.</p><p>Maximum size 5 MB</p><p>You can specify only one of readmeBody and readmeUrl; otherwise, an error results.</p>",
+                    "type": "string"
+                },
+                "SemanticVersion": {
+                    "description": "<p>The semantic version of the application:</p><p>\n <a href=\"https://semver.org/\">https://semver.org/</a>\n </p>",
+                    "type": "string"
+                },
+                "SourceCodeArchiveUrl": {
+                    "description": "<p>A link to the S3 object that contains the ZIP archive of the source code for this version of your application.</p><p>Maximum size 50 MB</p>",
+                    "type": "string"
+                },
+                "SourceCodeUrl": {
+                    "description": "A link to a public repository for the source code of your application, for example the URL of a specific GitHub commit.",
+                    "type": "string"
+                },
+                "SpdxLicenseId": {
+                    "description": "A valid identifier from <a href=\"https://spdx.org/licenses/\">https://spdx.org/licenses/</a>.",
+                    "type": "string"
+                },
+                "TemplateBody": {
+                    "description": "<p>The local raw packaged AWS SAM template file of your application.\n The file has the format file://&lt;path>/&lt;filename>.</p><p>You can specify only one of templateBody and templateUrl; otherwise an error results.</p>",
+                    "type": "string"
+                },
+                "TemplateUrl": {
+                    "description": "<p>A link to the S3 object containing the packaged AWS SAM template of your application.</p><p>You can specify only one of templateBody and templateUrl; otherwise an error results.</p>",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "Description",
+                "Name",
+                "Author"
+            ],
+            "type": "object"
+        },
+        "X_Amz_Content_Sha256": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Date": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Algorithm": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Credential": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Security_Token": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Signature": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_SignedHeaders": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

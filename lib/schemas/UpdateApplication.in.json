@@ -1,0 +1,73 @@
+{
+    "type": "object",
+    "properties": {
+        "applicationId": {
+            "required": true,
+            "type": "string"
+        },
+        "Version": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "Author": {
+                    "description": "<p>The name of the author publishing the app.</p><p>Minimum length=1. Maximum length=127.</p><p>Pattern \"^[a-z0-9](([a-z0-9]|-(?!-))*[a-z0-9])?$\";</p>",
+                    "type": "string"
+                },
+                "Description": {
+                    "description": "<p>The description of the application.</p><p>Minimum length=1. Maximum length=256</p>",
+                    "type": "string"
+                },
+                "HomePageUrl": {
+                    "description": "A URL with more information about the application, for example the location of your GitHub repository for the application.",
+                    "type": "string"
+                },
+                "Labels": {
+                    "description": "<p>Labels to improve discovery of apps in search results.</p><p>Minimum length=1. Maximum length=127. Maximum number of labels: 10</p><p>Pattern: \"^[a-zA-Z0-9+\\\\-_:\\\\/@]+$\";</p>",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "ReadmeBody": {
+                    "description": "<p>A text readme file in Markdown language that contains a more detailed description of the application and how it works.</p><p>Maximum size 5 MB</p>",
+                    "type": "string"
+                },
+                "ReadmeUrl": {
+                    "description": "<p>A link to the readme file in Markdown language that contains a more detailed description of the application and how it works.</p><p>Maximum size 5 MB</p>",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "X_Amz_Content_Sha256": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Date": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Algorithm": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Credential": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Security_Token": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Signature": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_SignedHeaders": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

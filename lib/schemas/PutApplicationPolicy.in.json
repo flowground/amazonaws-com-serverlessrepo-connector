@@ -1,0 +1,81 @@
+{
+    "type": "object",
+    "properties": {
+        "applicationId": {
+            "required": true,
+            "type": "string"
+        },
+        "Version": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "Statements": {
+                    "description": "An array of policy statements applied to the application.",
+                    "items": {
+                        "description": "Policy statement applied to the application.",
+                        "properties": {
+                            "Actions": {
+                                "description": "For the list of actions supported for this operation, see <a href=\"https://docs.aws.amazon.com/serverlessrepo/latest/devguide/access-control-resource-based.html#application-permissions\">Application \n Permissions</a>.",
+                                "items": {
+                                    "type": "string"
+                                },
+                                "type": "array"
+                            },
+                            "Principals": {
+                                "description": "An array of AWS account IDs, or * to make the application public.",
+                                "items": {
+                                    "type": "string"
+                                },
+                                "type": "array"
+                            },
+                            "StatementId": {
+                                "description": "A unique ID for the statement.",
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "Principals",
+                            "Actions"
+                        ],
+                        "type": "object"
+                    },
+                    "type": "array"
+                }
+            },
+            "required": [
+                "Statements"
+            ],
+            "type": "object"
+        },
+        "X_Amz_Content_Sha256": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Date": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Algorithm": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Credential": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Security_Token": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Signature": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_SignedHeaders": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}
