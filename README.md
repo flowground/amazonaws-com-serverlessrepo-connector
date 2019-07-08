@@ -5,7 +5,7 @@
 A generated **flow**ground connector for the AWSServerlessApplicationRepository API (version 2017-09-08).
 
 Generated from: https://api.apis.guru/v2/specs/amazonaws.com/serverlessrepo/2017-09-08/swagger.json<br/>
-Generated at: 2019-05-07T17:36:18+03:00
+Generated at: 2019-07-08T14:13:21+03:00
 
 ## API Description
 
@@ -36,11 +36,12 @@ Supported authorization schemes:
 - API Key
 ## Actions
 
-### Lists applications owned by the requester.
+### ListApplications
+> Lists applications owned by the requester.<br/>
 
 #### Input Parameters
-* `MaxItems` - _optional_ - Pagination limit
-* `NextToken` - _optional_ - Pagination token
+* `MaxItems` - _optional_ - Pagination limit<br/>
+* `NextToken` - _optional_ - Pagination token<br/>
 * `X-Amz-Content-Sha256` - _optional_
 * `X-Amz-Date` - _optional_
 * `X-Amz-Algorithm` - _optional_
@@ -49,7 +50,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Creates an application, optionally including an AWS SAM file to create the first application version in the same call.
+### CreateApplication
+> Creates an application, optionally including an AWS SAM file to create the first application version in the same call.<br/>
 
 #### Input Parameters
 * `Action` - _required_
@@ -62,7 +64,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Deletes the specified application.
+### DeleteApplication
+> Deletes the specified application.<br/>
 
 #### Input Parameters
 * `applicationId` - _required_
@@ -75,7 +78,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Gets the specified application.
+### GetApplication
+> Gets the specified application.<br/>
 
 #### Input Parameters
 * `applicationId` - _required_
@@ -88,7 +92,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Updates the specified application.
+### UpdateApplication
+> Updates the specified application.<br/>
 
 #### Input Parameters
 * `applicationId` - _required_
@@ -101,7 +106,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Creates an AWS CloudFormation change set for the given application.
+### CreateCloudFormationChangeSet
+> Creates an AWS CloudFormation change set for the given application.<br/>
 
 #### Input Parameters
 * `applicationId` - _required_
@@ -114,11 +120,12 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Retrieves the list of applications nested in the containing application.
+### ListApplicationDependencies
+> Retrieves the list of applications nested in the containing application.<br/>
 
 #### Input Parameters
-* `MaxItems` - _optional_ - Pagination limit
-* `NextToken` - _optional_ - Pagination token
+* `MaxItems` - _optional_ - Pagination limit<br/>
+* `NextToken` - _optional_ - Pagination token<br/>
 * `applicationId` - _required_
 * `X-Amz-Date` - _optional_
 * `X-Amz-Algorithm` - _optional_
@@ -127,7 +134,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Retrieves the policy for the application.
+### GetApplicationPolicy
+> Retrieves the policy for the application.<br/>
 
 #### Input Parameters
 * `applicationId` - _required_
@@ -140,10 +148,11 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Sets the permission policy for an application. For the list of actions supported for this operation, see<br/>
+### PutApplicationPolicy
+> Sets the permission policy for an application. For the list of actions supported for this operation, see<br/>
 >  <a href="https://docs.aws.amazon.com/serverlessrepo/latest/devguide/access-control-resource-based.html#application-permissions">Application <br/>
 >  Permissions</a><br/>
->  .
+>  .<br/>
 
 #### Input Parameters
 * `applicationId` - _required_
@@ -156,7 +165,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Creates an AWS CloudFormation template.
+### CreateCloudFormationTemplate
+> Creates an AWS CloudFormation template.<br/>
 
 #### Input Parameters
 * `applicationId` - _required_
@@ -169,7 +179,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Gets the specified AWS CloudFormation template.
+### GetCloudFormationTemplate
+> Gets the specified AWS CloudFormation template.<br/>
 
 #### Input Parameters
 * `applicationId` - _required_
@@ -182,11 +193,12 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Lists versions for the specified application.
+### ListApplicationVersions
+> Lists versions for the specified application.<br/>
 
 #### Input Parameters
-* `MaxItems` - _optional_ - Pagination limit
-* `NextToken` - _optional_ - Pagination token
+* `MaxItems` - _optional_ - Pagination limit<br/>
+* `NextToken` - _optional_ - Pagination token<br/>
 * `applicationId` - _required_
 * `X-Amz-Date` - _optional_
 * `X-Amz-Algorithm` - _optional_
@@ -195,7 +207,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Creates an application version.
+### CreateApplicationVersion
+> Creates an application version.<br/>
 
 #### Input Parameters
 * `applicationId` - _required_
